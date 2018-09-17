@@ -38,7 +38,7 @@ mkdir $myapp
 cd $myapp
 touch Dockerfile
 
-echo "FROM ruby:2.3.3
+echo "FROM ruby:2.5
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
 RUN mkdir /$myapp
 WORKDIR /$myapp
@@ -51,7 +51,7 @@ RUN bundle install
 
 touch Gemfile
 echo "source 'https://rubygems.org'
-gem 'rails', '5.0.2'
+gem 'rails', '5.2'
 " > Gemfile
 
 touch Gemfile.lock
@@ -108,7 +108,7 @@ echo "source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.2'
+gem 'rails', '~> 5.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
